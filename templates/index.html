@@ -2,12 +2,415 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>olá mundo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/index.css') }}">
+    <link rel="shortcut icon" href="../static/img/file-code.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  .arrow-pattern {
+      display: inline-block;
+      margin-right: 20px; /* Espaço entre os padrões */
+      color: #6D6D6D;
+      
+  }
+
+</style>
+
+    <title>Bem-vindo, Eriot</title>
 </head>
 <body>
-    <h1>Bem Vindos </h1>
-    
+    <nav class="navbar navbar-expand-md   mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../static/img/file-code.svg"  width="30" height="24"  alt="" class="d-inline-block align-text-top"><span class="m">M</span> <span class="A">A </span> <span>W</span>   <span class="E">É</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active " style="color: aliceblue;" aria-current="page" href="/">Inicial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre" style="color: aliceblue;">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#api" style="color: aliceblue;">API</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/documentacao" style="color: aliceblue;">Documentação</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+     <section class="about" id="sobre">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="about_content">
+              <h2 class="heading_about text-start" style="color: white; font-size: 38px ; line-height: 38px;">Bem-vindo<br></h2>
+              <p class="para_about">O objetivo desta API é valorizar a cultura indígena sateré-mawé, contribuindo para que mais pessoas possam conhecer a língua indígena sateré-mawé, valorizando a identidade cultural, promovendo a aprendizagem dos alunos e educadores, fazendo conexão entre a cultura ancestral e o uso da tecnologia para garantir que a sabedoria e os números tradicionais da comunidade sejam transmitidos para as gerações futuras.</p>
+            </div>
+          </div>
+          <div class="container-lg col-md-4 col-sm-12">
+            <img src="../static/img/Luva_tocandeira_Satare_Mawe.png" alt=""  class="img-responsive img-thumbnail img-fluid" id="imagem-tucandeira"   >
+            <p style="color: aliceblue; text-align: center; align-items: center;">Luva da tocandeira</p>
+          </div>
+        </div>
+      </div>
+    </section><br>
+      <hr class="linha">
+      <main class="container">
+        <div class="bg-body-tertiary p-5 rounded">
+          <h1 style="font-size: 38px; line-height: 42px;">API Sateré-Mawé</h1>
+          <p class="lead">Aqui você vai encontrar Api's para que você possar explorar números, alfabetos e Palavras em Sateré-mawé .</p>
+        </div>
+      </main> <br>
+      <div class="container-fluid" id="api" style="text-align: center; align-items: center; ">
+        <h3 style="font-size: 38px; line-height: 42px;">Conheça as API's</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Números em Sateré-mawé</h5>
+                <p class="card-text">
+                  Com os números sateré-mawé você pode explorar sua imaginação fazendo brincadeira educativas para sua aplicação, elaborando aulas divertidas, ou ainda mais, aprenda junto, valorizando a cultura e fazendo com que seus alunos possam conhecer uma lingua nova! junte-se a nós e expande a cultura indigena através desta API.</p>
+                  <a href="/api/numeros_satere" class="list-group-item api_cores">Api Números</a><br>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Alfabeto em sateré-mawé</h5>
+                <p class="card-text">Explore através desta api os alfabeto na língua sateré-mawé. conte com está belíssima api para conhecer mais sobre a cultura indígena desta tribo, traga para sua aplicação mais riqueza cultural, além de expandir para que mais pessoas possam conhecer a cultura que faz o brasil ser um país com tantas riquezas.</p>
+                <a href="/api/alfabeto" class="list-group-item api_cores" >Api Alfabetos</a><br>
+              </div>
+            </div><br>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <img src="" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Palavras em Sateré-mawé</h5>
+                <p class="card-text">As Palavras em qualquer idioma é de fundamental para que haja comunicação, mas você sabia que muitas tribos indigenas do brasil está perdendo sua lingua nativa. Devido a isto, está api tem como objetivo incentivar para que mais pessoas conheça os tesouros guardados no brasil, valorizando a cultura indigena da tribo sateré-mawé  </p>
+                <a href="/api/palavras" class="list-group-item api_cores">Api de Palavras</a><br>
+              </div>
+            </div><br>
+          </div><br>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Números em Sateré-mawé de trezentos</h5>
+                <p class="card-text">Você pode querer apenas para sua aplicação os números que começam a partir do número trezentos (300), pensando nisso, também está disponível a API que começam neste número, para que você possa manipular rapidamente e fazer um get com mais eficiente para sua aplicação. Os números estão organizados com id, número, e sua descrição na lingua sateré-mawé.</p>
+                <a href="/api/numeros_de_trezentos" class="list-group-item api_cores">Api de Números de Trezentos</a><br>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      </div><br>
+      <hr>
+      <div class="clearfix container">
+        <p class="paragrafo">
+        <img src="/static/img/colar.JPG" class="col-md-4 float-md-end img-responsive img-fluid"  alt="..." id="img-colar">
+          Artesanato indígena Sateré-mawé feito pela indígena Celina dos Santos. É um colar que tem suas ancestralidade, feito com Morototó , que foi ensinado pelos seus pais Thomé e Izabel. Thomé é fundador  da aldeia vila da Paz, que hoje é uma aldeia onde habita seus netos e filhos, localiza-se no rio urupadí.
+        </p>
+      </div><br>
+      <main class="container">
+        <div class="bg-body-tertiary p-5 rounded">
+          <h1 style="font-size: 38px; line-height: 42px;">Educação</h1>
+          <p class="lead">A educação na área indígena, se faz muitas vezes por modular, onde as crianças estudam todos juntos por exemplo: De 1° ao ao 5°ano na mesma sala, de 6° ano ao 9° ano, como também tem os de jovens e adultos, porém, mesmo com as dificuldades, os indígenas sempre estão disposto a aprender algo novo, um das materias que eles gostam bastante, é da matemática e história de sua própria cultura .</p>
+        </div>
+      </main> <br>
+      <div class="container">
+        <img src="/static/img/criancas2.jpg" alt="" class="img-fluid highlight-on-hover">
+        <p style="color: aliceblue; text-align: center; align-items: center;">Foto de crianças da comunidade Antiokia</p>
+      </div>
+      <div class="container-fluid" id="api" style="text-align: center; align-items:center">
+        <h3 style="font-size: 38px; line-height: 42px; color: white; font-weight: bold;">Aldeias sater<span class="a">é</span>-<span class="m">M</span>aw<span class="E">é</span></h3>
+      </div> 
+      <div class="container">
+        <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button id="but" class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              POLO URUPADI
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ALDEIA</th>
+                    <th scope="col">N° DE PROFESSOR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>NOVA JERUSALEM</td>
+                    <td>1</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>VILA DA PAZ</td>
+                    <td>2</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>SAGRADO CORAÇÃO DE JESUS </td>
+                    <td>5</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>MONTE SINAI </td>
+                    <td>2</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>SANTO ANTONIO DE PADUA</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>FILADELFIA</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>MONTE DA BENÇÃO</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>SANTA MARIA</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>NOVO ESPIRITO SANTO</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>SÃO BENTO</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>KURUATUBA</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button id="but2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              POLO BAIXO MARAU
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ALDEIA</th>
+                    <th scope="col">N° DE PROFESSOR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>ALTO ALEGRE</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>NOVA AMÉRICA</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>SÃO JOSÉ</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>NOVA ESPERANÇA</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>ILHA MICHILES</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>MONTE HOREBE</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>BELO HORIZONTE</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>VALE DO QUIINHA</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>SÃO PEDRO</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>SÃO BENEDITO</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>MENINO DEUS</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>SÃO RAIMUNDO</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>NOVA JERUSALÉM</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>MONTE SALÉM</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button id="but3"class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: black; border-color: black; outline: none; color: white;" tabindex="-1">
+              POLO MÉDIO MARAU
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ALDEIA</th>
+                    <th scope="col">N° DE PROFESSOR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>SAGRADA FAMÍLIA</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>LIBERDADE</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>SÃO JORGE</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>SANTA IZABEL</td>
+                    <td>04</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>VILA BATISTA</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>BOAS NOVAS</td>
+                    <td>03</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>BOAS MIRIM</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>VILA NOVA II</td>
+                    <td>08</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>CRISTO BOM PASTOR</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>LÍRIO DO VALE</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>SANTA FÉ</td>
+                    <td>01</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>ANTIOKIA II</td>
+                    <td>03</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>TERRA NOVA</td>
+                    <td>01</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+        <div class="container footer">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+              <span class="mb-3 mb-md-0 " style="text-align: center; align-items: center;"><img src="/static/img/desenvolvedor1.JPG" alt="desenvolvedor" class="img-dev">&copy; 2023 Desenvolvido por: Isaac Felipe</span> 
+            </div>
+        </footer>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <script src="{{ url_for('static', filename='js/calculadora.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/index.css') }}">
+    <link rel="shortcut icon" href="../static/img/file-code.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  .arrow-pattern {
+      display: inline-block;
+      margin-right: 20px; /* Espaço entre os padrões */
+      color: #6D6D6D;
+      
+  }
+</style>
+
+    <title>Bem-vindo, Eriot</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md   mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../static/img/file-code.svg"  width="30" height="24"  alt="" class="d-inline-block align-text-top"><span class="m">M</span> <span class="A">A </span> <span>W</span>   <span class="E">É</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active " style="color: aliceblue;" aria-current="page" href="/">Inicial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: aliceblue;">Documentação</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="container">
+        <div class="bg-body-tertiary p-5 rounded">
+          <h1>API Sateré-Mawé</h1>
+          <p class="lead">Esta é a documentação de referência para a API sateré-mawé. A própria API é baseada em recursos representados pelo formato JSON e manipulados usando o protocolo HTTP..</p>
+        </div>
+      </main> <br>
+      <div class="container ">
+        <p class="lead" style="color: white;">
+            Versões da API:  Todas as alterações importantes nas APIs sataré-mawé serão documentadas aqui. Atualmente, as APIs sateré-mawé estão na versão v1. Você pode fazer uma requisição em python da seguinte forma para ter acesso em formato JSON. Exemplo:
+        </p>
+      </div>
+      <div class="container linha">
+        <div class="row">
+          <div class="col">
+            <pre>
+            <span class="import">import</span>  <span class="request"> requests</span>
+            <span class="import">import</span>  <span class="request">json</span>
+            <span class="import">url=</span><span class="request">'http://127.0.0.1:5000/api/numeros_satere'</span> 
+            <span>response = requests.get(url)</span> 
+           <span class="import">if response.status_code == 200:</span> 
+              <span class="import">data = response.json()</span>  
+              <span>for numero_satere in data:</span> 
+                    <span>print(</span><span class="mensagem">f"ID: {numero_satere['id']}, Número: {numero_satere['numero']}, Descrição: {numero_satere['descricao']}")</span>
+          <span>else:</span>
+              <span>print(</span> <span class="mensagem">"Falha na requisição. Verifique se a API está em execução.")</span> 
+            </pre>
+        </div> 
+        </div>
+        <div class="container ">
+          <p class="lead" style="color: white;">
+            Antes de executar este código, é importante garantir que o seguinte esteja configurado:
+            <ul style="color: white;">
+              <li>Python: Certifique-se de que você tenha o Python instalado em seu sistema.</li>
+              <li>Biblioteca Requests: Você deve ter a biblioteca 'requests' instalada para realizar solicitações HTTP. Você pode instalá-la com o seguinte comando:</li>
+            </ul>
+          </p>
+        </div>
+        <div class="container linha">
+          <div class="row">
+            <div class="col">
+              <pre>
+              <span class="request">pip install requests</span>  
+              </pre>
+          </div> 
+          </div>
+          <div class="container ">
+            <p class="lead" style="color: white;">
+              O código em questão realiza as seguintes operações: Importa as bibliotecas necessárias:
+              <ul style="color: white; ">
+                <li>requests: Esta biblioteca é usada para fazer solicitações HTTP.</li>
+                <li>json: Esta biblioteca é usada para analisar os dados JSON recebidos como resposta da API.</li>
+              </ul>
+            </p>
+          </div>
+        <div class="container ">
+          <p class="lead" style="color: white;">
+            Métodos HTTP são usados ​​para manipular recursos. Porém, como nem todos os recursos permitem todas as operações HTTP, observe OK a referência de cada recurso abaixo. Métodos usados ​​com endpoints de coleta, no momento está api só aceita apenas requisições get. observe:
+          </p>
+          
+        </div>
+        <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Método HTTP</th>
+      <th scope="col">Operação</th>
+      <th scope="col">Status HTTP de sucesso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">GET</th>
+      <td>Listar itens da coleção</td>
+      <td>200 - OK</td>
+    </tr>
+  </tbody>
+</table>
+<div class="container ">
+  <p class="lead" style="color: white;">
+   Formato em JSON:
+  </p>
+  
+</div>
+<div class="container linha">
+  <div class="row">
+    <div class="col">
+      <pre>
+        <span class="import">
+        [
+        {
+          "descricao":</span><span class="mensagem">"Kat’i",</span> 
+        <span class="import">"id": 1,
+          "numero": 0
+        },</span>  
+      <span class="import">{
+          "descricao":</span><span class="mensagem">"Wentup",</span> 
+        <span class="import"> "id": 2,
+          "numero": 1
+        },</span> 
+       <span class="import">{
+          "descricao":</span> <span class="mensagem">"Typy",</span> 
+       <span class="import"> "id": 3,
+          "numero": 2
+        } 
+        ]</span> 
+      </pre>
+  </div> 
+  </div>
+  <div class="container ">
+    <p class="lead" style="color: white;">
+     Visualizar na WEB:  Para fazer uma requisição a está API externa e exibir os dados no navegador usando Flask, você pode criar uma rota em sua aplicação Flask que faz a requisição à API externa e depois exibe os dados na página HTML. Aqui está um exemplo de como fazer isso:
+    </p>
+  </div>
+  <div class="container linha">
+    <div class="row">
+      <div class="col">
+        <pre>
+       <span class="import">from flask import Flask, <span class="request">render_template </span> 
+          import <span class="request">requests</span> 
+          app = Flask(__name__)
+          @app.route('/')
+          def show_data():
+              url =<span class="mensagem">'http://127.0.0.1:5000/api/numeros_satere'</span> 
+              response = requests.get(url)
+
+              if response.status_code == 200:
+                  data = response.json()
+                  return render_template <span class="mensagem">('data.html', numeros_satere=data)</span>
+              else:
+                  return <span class="mensagem">"Falha na requisição. Verifique se a API está em execução."</span> 
+
+          if __name__ == '__main__':
+              app.run(debug=True)</span> 
+
+        </pre>
+    </div> 
+    </div>
+    <div class="container ">
+      <p class="lead" style="color: white;">
+        Neste exemplo, criamos uma rota raiz ('/') que faz a requisição à API externa e, se a resposta for bem-sucedida, renderiza um modelo HTML para exibir os dados. Se a resposta da API não for bem-sucedida, uma mensagem de erro será exibida.
+        Você também precisará criar um arquivo HTML chamado <span class="import" style="font-weight:bold;">data.html</span> para exibir os dados.
+      </p>
+    </div>
+    
+    <div class="container">
+      <h2 style="color: white;">Calculadora</h2>
+      <input type="text" id="inputNum1" placeholder="Número 1" class="calc"  >
+      <input type="text" id="inputNum2" placeholder="Número 2" class="calc">
+      <button onclick="somar()">Somar</button>
+      <button onclick="subtrair()">Subtrair</button>
+      <button onclick="multiplicar()">Multiplicar</button>
+      <button onclick="dividir()">Dividir</button>
+      <p style="color: #ECC33D;">Resultado: <span id="resultado">0</span></p>
+      <p style="color: #ECC33D;">Descrição: <span id="descricao"></span></p>
+  </div>
+  
+      <hr>
+      <div class="container footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <span class="mb-3 mb-md-0 " style="text-align: center; align-items: center;"><img src="/static/img/desenvolvedor1.JPG" alt="desenvolvedor" class="img-dev">&copy; 2023 Desenvolvido por: Isaac Felipe</span> 
+          </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
