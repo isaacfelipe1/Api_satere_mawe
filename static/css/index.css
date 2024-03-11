@@ -137,9 +137,9 @@ h3{
 }
 #but:focus,
 #but:hover {
-  border-color: transparent !important; /* Define a cor da borda como transparente quando o botão for focado ou hover (passar o mouse) */
-  box-shadow: none !important; /* Remove qualquer sombra do botão quando ele for focado ou hover */
-  outline: none; /* Remove a borda de foco padrão do botão */
+  border-color: transparent !important; 
+  box-shadow: none !important; 
+  outline: none; 
 }
 
 #but2{
@@ -149,9 +149,9 @@ h3{
 }
 #but2:focus,
 #but2:hover {
-  border-color: transparent !important; /* Define a cor da borda como transparente quando o botão for focado ou hover (passar o mouse) */
-  box-shadow: none !important; /* Remove qualquer sombra do botão quando ele for focado ou hover */
-  outline: none; /* Remove a borda de foco padrão do botão */
+  border-color: transparent !important; 
+  box-shadow: none !important; 
+  outline: none; 
 }
 #but3{
   background-color: #000000;
@@ -160,9 +160,9 @@ h3{
 }
 #but3:focus,
 #but3:hover {
-  border-color: transparent !important; /* Define a cor da borda como transparente quando o botão for focado ou hover (passar o mouse) */
-  box-shadow: none !important; /* Remove qualquer sombra do botão quando ele for focado ou hover */
-  outline: none; /* Remove a borda de foco padrão do botão */
+  border-color: transparent !important; 
+  box-shadow: none !important; 
+  outline: none;
 }
 button{
   border: none;
@@ -246,8 +246,8 @@ span{
   width: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centralize horizontalmente */
-  justify-content: center; /* Centralize verticalmente */
+  align-items: center; 
+  justify-content: center; 
   border-radius: 10px;
   color: #111D33;
 }
@@ -260,7 +260,7 @@ span{
 }
 .input-menor:focus {
   border-color: black;
-  border: none; /* Cor da borda quando em foco */
+  border: none;
 }
 
 .botao_cadastrar{
@@ -292,8 +292,8 @@ span{
   transition: transform 0.3s ease;
 }
 .img-fluid:hover {
-  transform: scale(1.1); /* Aumenta a escala da imagem ao passar o mouse */
-  cursor: pointer; /* Altera o cursor para um indicador de clique */
+  transform: scale(1.1); 
+  cursor: pointer; 
 }
 .api_cores:hover{
   background-color: #000000;
