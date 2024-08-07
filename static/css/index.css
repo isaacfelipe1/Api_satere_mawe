@@ -106,9 +106,10 @@ h3{
   .navbar{
     background-color: var(--vermelho);
     color: #EAECF0;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 12.5px;
     font-weight: bold;
+    padding: 25px;
   }
   .btn-primary{
     background-color: var(--vermelho);
