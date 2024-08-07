@@ -1,27 +1,24 @@
-# Ignorar arquivos Python compilados
+
 **/*.pyc
 *.pyc
 __pycache__/
 
-# Ignorar o ambiente virtual
-satere_mawe/  # Substitua pelo nome correto do diretório do seu ambiente virtual
 
-# Ignorar configurações de IDEs e editores
+
 .vscode/
 .idea/
 *.sublime-workspace
 *.sublime-project
 
-# Ignorar arquivos de log e banco de dados local
+
 *.log
 *.sqlite3
 *.db
 
-# Ignorar arquivos de sistema
+
 .DS_Store
 Thumbs.db
 
-# Ignorar arquivos de pacotes e distribuição
 *.egg-info/
 dist/
 build/
